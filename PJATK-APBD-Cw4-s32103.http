@@ -1,6 +1,43 @@
 @PJATK_APBD_Cw4_s32103_HostAddress = http://localhost:5113
 
-GET {{PJATK_APBD_Cw4_s32103_HostAddress}}/weatherforecast/
+### GET all PCs
+GET {{PJATK_APBD_Cw4_s32103_HostAddress}}/api/pcs
 Accept: application/json
 
-###
+### GET PC with components
+GET {{PJATK_APBD_Cw4_s32103_HostAddress}}/api/pcs/1/components
+Accept: application/json
+
+### GET PC not found
+GET {{PJATK_APBD_Cw4_s32103_HostAddress}}/api/pcs/999/components
+Accept: application/json
+
+### POST create PC
+POST {{PJATK_APBD_Cw4_s32103_HostAddress}}/api/pcs
+Content-Type: application/json
+
+{
+  "name": "Gaming Beast X",
+  "weight": 12.5,
+  "warranty": 36,
+  "createdAt": "2026-05-08T09:00:00",
+  "stock": 5
+}
+
+### PUT update PC
+PUT {{PJATK_APBD_Cw4_s32103_HostAddress}}/api/pcs/1
+Content-Type: application/json
+
+{
+  "name": "Gaming Beast X Updated",
+  "weight": 13.0,
+  "warranty": 48,
+  "createdAt": "2026-05-08T09:00:00",
+  "stock": 10
+}
+
+### DELETE PC
+DELETE {{PJATK_APBD_Cw4_s32103_HostAddress}}/api/pcs/1
+
+### DELETE PC not found
+DELETE {{PJATK_APBD_Cw4_s32103_HostAddress}}/api/pcs/999
