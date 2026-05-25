@@ -26,7 +26,12 @@ public class PCComponentConfiguration : IEntityTypeConfiguration<PCComponent>
         builder.HasData(
             new PCComponent { PCId = 1, ComponentCode = "CPU0000001", Amount = 1 },
             new PCComponent { PCId = 1, ComponentCode = "GPU0000001", Amount = 1 },
-            new PCComponent { PCId = 1, ComponentCode = "RAM0000001", Amount = 2 }
+            new PCComponent { PCId = 1, ComponentCode = "RAM0000001", Amount = 2 },
+            new PCComponent { PCId = 2, ComponentCode = "CPU0000001", Amount = 1 },
+            new PCComponent { PCId = 2, ComponentCode = "RAM0000001", Amount = 1 },
+            new PCComponent { PCId = 3, ComponentCode = "CPU0000001", Amount = 1 },
+            new PCComponent { PCId = 3, ComponentCode = "GPU0000001", Amount = 2 },
+            new PCComponent { PCId = 3, ComponentCode = "RAM0000001", Amount = 4 }
         );
     }
 }
